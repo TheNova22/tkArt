@@ -8,8 +8,8 @@ from PIL import Image
 
 root = tk.Tk()
 
-width = 1080
-height = 1080
+width = 500
+height = 500
 win = tk.Canvas(root,width=width ,height=height)
 win.pack()
 
@@ -18,7 +18,7 @@ angle = (2 * math.pi) / float(nLines)
 lineAngles = [x for x in range(nLines)]
 allLines = []
 # Radius decreases each time
-for radius in range(500,0,-50):
+for radius in range((min(width,height) // 2) - 30,0,-50):
     # If ABC is a right angled triangle, with A and B being two points in the base and C on the top being a point on the hypotenuse
     # Let Angle(ABC) be 90 degree, and let Angle(BAC) = Angle(ACB) = 45 degrees
     # Theta will be the angle at which a line will be drawn with respect to the center

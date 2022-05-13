@@ -4,8 +4,8 @@ import random
 import tkinter as tk
 root = tk.Tk()
 
-width = 1080
-height = 1080
+width = 500
+height = 500
 win = tk.Canvas(root,width=width,height=height)
 win.pack()
 
