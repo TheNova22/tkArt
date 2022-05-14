@@ -1,5 +1,18 @@
 # tkArt
-A repository created to explore geometry and art creation using TkInter, a standard GUI library for Python.
+**tkArt is a project created to explore art creation using algorithms and geometry.**
+
+The project works using [tkinter](https://docs.python.org/3/library/tkinter.html), the standard GUI library for Python.
+
+## Usage
+Width and Height for the canvas is mentioned at the start of each file, you can edit and set it to your preference.
+```python
+# Example values
+width = 500
+height = 500
+```
+
+To the run the file, use
+``` python3 <fileName>.py ```
 
 ## Art so far
 
