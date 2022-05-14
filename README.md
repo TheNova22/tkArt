@@ -11,6 +11,8 @@ width = 500
 height = 500
 ```
 
+Each file has comments that explains the code written below it.
+
 To the run the file, use
 ``` python3 <fileName>.py ```
 
