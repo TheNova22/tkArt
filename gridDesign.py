@@ -2,7 +2,15 @@ import math
 import numpy as np
 import random
 import tkinter as tk
+
+
 root = tk.Tk()
+
+# root.geometry("300x300-1000-1000")
+# root.state('zoomed')
+
+root.title("Random Grid")
+
 
 width = 500
 height = 500

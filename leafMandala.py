@@ -8,6 +8,12 @@ from PIL import Image
 
 root = tk.Tk()
 
+# root.geometry("300x300-1000-1000")
+# root.state('zoomed')
+
+
+root.title("Leaf Mandala")
+
 width = 500
 height = 500
 win = tk.Canvas(root,width=width ,height=height)

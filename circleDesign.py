@@ -1,12 +1,24 @@
 import tkinter as tk
 import math
 import random
+
+
 root = tk.Tk()
+
+
+# root.geometry("300x300-1000-1000")
+# root.state('zoomed')
+
+
+root.title("Lines In Circle")
 
 width = 500
 height = 500
 win = tk.Canvas(root,width=width,height=height)
 win.pack()
+
+# Experiment with flag at line 66, set it to any value between 0 and 2, can be random too, i like setting it to 0
+
 class CustomLine:
     def __init__(self, fromPoint, toPoint,theta, angle, dist = float('inf')):
         self.fromPoint = fromPoint
@@ -53,14 +65,27 @@ class CustomLine:
         return x,y
 
 
-    def update_ToPoint(self):
+    def update_ToPoint(self, radius):
         a = self.toPoint
-        new_dir = random.randint(100, 150)
-        flag = 0
-        # flag = random.randint(0,2)
-        if flag == 0: self.toPoint = [a[0] + new_dir , a[1]]
-        elif flag == 1: self.toPoint = [a[0] , a[1] + new_dir]
-        else: self.toPoint = [a[0] + new_dir  , a[1] + new_dir]
+
+        flag = 1
+        flag = random.randint(0,1)
+
+
+        x = a[0]
+        y = a[1]
+
+        if flag == 0: x += random.randint(radius - 50 , radius )
+        elif flag == 1: y += random.randint(radius - 50 , radius )
+        # else:
+        #     x += new_dir
+        #     y += new_dir
+
+
+        
+
+        self.toPoint = [x,y]
+        
 
     
 
@@ -72,8 +97,9 @@ def draw():
     radius = min(width,height) // 2 - 50
     # Create a circle
     win.create_oval((width//2) - radius,(height//2) - radius, (width//2) + radius,(height//2) + radius)
+
     # Specify lines to be drawn
-    nLines = 300
+    nLines = random.randint(300,600)
     angle = (2 * math.pi) / float(nLines)
     points = [x for x in range(nLines)]
     random.shuffle(points)
@@ -87,16 +113,19 @@ def draw():
         # Create an object with the above vals
         line = CustomLine(pos1,d,theta, angle)
         # Radomly change the point
-        line.update_ToPoint()
+        line.update_ToPoint(radius)
         # Append the object to a list
         allLines.append(line)
     drewLines = []
+
+    def checkIfOutCircle(x,center_x,y,center_y,radius):
+        return ((x - center_x)**2) + ((y - center_y)**2) > radius**2
     # We now have to check if the line to be drawn intersects any other pre-drawn lines or not
     # If it does, then we reset to the toPoint in it to the point of intersection
     for i in range(len(allLines)):
-        draw = True
+
+        line1 = [[allLines[i].fromPoint[0],allLines[i].fromPoint[1]],[allLines[i].toPoint[0],allLines[i].toPoint[1]]]
         for j in range(len(drewLines)):
-            line1 = [[allLines[i].fromPoint[0],allLines[i].fromPoint[1]],[allLines[i].toPoint[0],allLines[i].toPoint[1]]]
             line2 = [[drewLines[j].fromPoint[0],drewLines[j].fromPoint[1]],[drewLines[j].toPoint[0],drewLines[j].toPoint[1]]]
             if allLines[i].intersect(line1,line2):
                 slope1 = allLines[i].slope(line1[0],line1[1])
@@ -107,10 +136,10 @@ def draw():
                 if a:
                     x , y = a[0], a[1]
                     dist = ((line1[0][0] - x)**2)  + ((line1[0][1] - y)**2)
-                    if dist < allLines[i].dist and (x > (width//2) - radius and x < (width//2) + radius) and (y > (height//2) - radius and y < (height//2) + radius):
+                    if dist < allLines[i].dist:
                         allLines[i].toPoint = [x,y]
                         allLines[i].dist = dist
-        if draw:
+        if checkIfOutCircle(allLines[i].fromPoint[0], width // 2, allLines[i].fromPoint[1], height // 2, radius) or checkIfOutCircle(allLines[i].toPoint[0], width // 2, allLines[i].toPoint[1], height // 2, radius) == False:
             drewLines.append(allLines[i])
             s,d = allLines[i].getDetails()
             win.create_line(s[0],s[1],d[0],d[1])
