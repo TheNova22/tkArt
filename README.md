@@ -1,5 +1,5 @@
 # tkArt
-**tkArt is a project created to explore art creation using algorithms and geometry.**
+**tkArt is a project created to explore art creation with Python using algorithms and geometry.**
 
 The project works using [tkinter](https://docs.python.org/3/library/tkinter.html), the standard GUI library for Python.
 
