@@ -15,3 +15,31 @@ You can go through the documentation [here](https://docs.python.org/3/library/tk
 
 Below, we shall also go through the basic workings of it.
 
+### Initialisation
+Every program that uses tkinter shall begin with an import statement.
+```python
+import tkinter as tk
+```
+
+Generally each tkinter program begins with definition of the root. This shall be responsible for creating a root window.
+
+```python
+root = tk.Tk()
+```
+
+To set up UI instances and get events like clicks, etc, tkinter provides a method that shall set everything in a while loop until the window gets closed. This is referred to as mainloop and is generally implemented in a tkinter program.
+
+```python
+root.mainloop()
+```
+
+A root shall contain a Canvas, this will act as a drawing board on which lines, circles, etc will be drawn.
+We also call a method called _pack()_ which shall manage widget organisation in blocks before placing them in the parent widget.
+
+```python
+width = 500
+height = 500
+win = tk.Canvas(root,width=width,height=height)
+win.pack()
+```
+
