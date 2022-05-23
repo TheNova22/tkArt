@@ -35,6 +35,6 @@ Through this, users can even potentially move on to contributing and improving t
 
 ## Contribution
 
-While contributing, it must be necessary that each contributor keep in mind the [Code Of Conduct](https://github.com/TheNova22/tkArt/blob/main/CODE_OF_CONDUCT.md).
+While contributing, it must be necessary that each contributor keeps in mind the [Code Of Conduct](https://github.com/TheNova22/tkArt/blob/main/CODE_OF_CONDUCT.md).
 
 This repository is open for everyone to contribute and is maintained by [TheNova22](https://github.com/TheNova22).
