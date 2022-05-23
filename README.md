@@ -16,6 +16,11 @@ Each file has comments that explains the code written below it.
 To the run the file, use
 ``` python3 <fileName>.py ```
 
+## Learning
+This repository contains a [LEARN.md](https://github.com/TheNova22/tkArt/blob/main/LEARN.md) which users can learn and understand how the project works.
+
+Through this, users can even potentially move on to contributing and improving tkArt.
+
 ## Art so far
 
 ### [Leaf Mandala](https://github.com/TheNova22/tkArt/blob/main/leafMandala.py)
@@ -26,3 +31,10 @@ To the run the file, use
 
 ### [Line Grids](https://github.com/TheNova22/tkArt/blob/main/gridDesign.py)
 <img src="https://github.com/TheNova22/tkArt/blob/main/images/grid.png" width="500" height="500"> <img src="https://github.com/TheNova22/tkArt/blob/main/images/grid1.png" width="500" height="500">
+
+
+## Contribution
+
+While contributing, it must be necessary that each contributor keep in mind the [Code Of Conduct](https://github.com/TheNova22/tkArt/blob/main/CODE_OF_CONDUCT.md).
+
+This repository is open for everyone to contribute and is maintained by [TheNova22](https://github.com/TheNova22).
