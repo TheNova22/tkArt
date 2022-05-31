@@ -42,4 +42,29 @@ height = 500
 win = tk.Canvas(root,width=width,height=height)
 win.pack()
 ```
+If one has dual monitor setup or requires the window to be created at a specific location in their screen, after declaring the root they can use geometry to adjust it.
 
+```python
+# WidthxHeight-Xpadding-Ypadding
+root.geometry("300x300-1000-1000")
+```
+
+To automatically scale the window to the size of the screen, one can change the state to <i>zoomed</i>.
+
+```python
+root.state('zoomed')
+```
+
+### Random
+
+We shall be using randomness to generate points for any image we create. Hence for it, we shall import a built-in package called <i>random</i>. Through this, we can generate numbers or even make a selection from a given list.
+
+```python
+import random
+```
+
+To generate a random integer, we can use randint where you specify a range of numbers.
+
+```python
+random.randint(10, 50)
+```
