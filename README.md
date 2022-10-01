@@ -33,7 +33,7 @@ Through this, users can even potentially move on to contributing and improving t
 <img src="https://github.com/TheNova22/tkArt/blob/main/images/grid.png" width="500" height="500"> <img src="https://github.com/TheNova22/tkArt/blob/main/images/grid1.png" width="500" height="500">
 
 ### [Glasses](https://github.com/TheNova22/tkArt/blob/main/glasses.py)
-<img src="https://github.com/TheNova22/tkArt/blob/main/images/glasses.png" width="800" height="500"> 
+<img src="https://github.com/TheNova22/tkArt/blob/main/images/glasses.png" width="800" height="500"> <img src="https://github.com/TheNova22/tkArt/blob/main/images/glasses-col.png" width="800" height="500"> 
 
 
 ## Contribution
