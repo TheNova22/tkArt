@@ -36,7 +36,7 @@ Through this, users can even potentially move on to contributing and improving t
 <img src="https://github.com/TheNova22/tkArt/blob/main/images/glasses.png" width="800" height="500"> <img src="https://github.com/TheNova22/tkArt/blob/main/images/glasses-col.png" width="800" height="500"> 
 
 ### [Sharingan](https://github.com/TheNova22/tkArt/blob/main/sharingan.py)
-<img src="https://github.com/TheNova22/tkArt/blob/main/images/kamui.png" width="500" height="500">
+<img src="images/kamui.png" width="500" height="500">
 
 ## Contribution
 
