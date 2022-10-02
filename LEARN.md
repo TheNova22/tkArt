@@ -68,3 +68,9 @@ To generate a random integer, we can use randint where you specify a range of nu
 ```python
 random.randint(10, 50)
 ```
+
+To change color of the canvas, we add a parameter called background to Canvas.
+
+```python
+win = tk.Canvas(root, width=width, height=height, background="black")
+```
